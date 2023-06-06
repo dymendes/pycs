@@ -70,23 +70,6 @@ class ImageController {
     return res.status(200).json({ image, message: "Image fetched successfully!" })
   }
 
-  async findFile(req, res) {
-    const { id } = req.params
-
-    const image = await ImageService.findById(id)
-
-    const options = {
-      root: process.env.UPLOADS_SRC,
-      dotfiles: "deny",
-      headers: {
-        "x-timestamp": Date.now(),
-        "x-sent": true
-      }
-    }
-
-    res.sendFile(image.filename.system, options)
-  }
-
   async update(req, res) {
     const { id } = req.params
     const { title, description } = req.body

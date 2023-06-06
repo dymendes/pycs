@@ -10,7 +10,6 @@ ImageRouter.post("/", authentication, upload.single("file"), ImageController.upl
 
 ImageRouter.get("/", ImageController.findAll)
 ImageRouter.get("/:id", ImageController.findById)
-ImageRouter.get("/file/:id", ImageController.findFile)
 
 ImageRouter.put("/:id", authentication, ImageController.update)
 
