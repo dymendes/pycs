@@ -44,7 +44,7 @@ class ImageController {
     const url = process.env.API_URL
 
     const query = await ImageService.findAll()
-    
+
     const images = []
 
     query.forEach(image => {

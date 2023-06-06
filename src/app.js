@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import path from 'path';
 import { fileURLToPath } from 'url'
+import cors from "cors"
 
 import { UserRouter } from "./routes/user.js"
 import { ImageRouter } from "./routes/image.js"
