@@ -8,9 +8,12 @@ const ImageResponseData = (image, url) => {
     user: image.user,
     title: image.title,
     description: image.description,
-    name: image.filename.original,
+    filename: {
+      orignal: image.filename.original,
+      system: image.filename.system
+    },
     links: {
-      file: `${url}/image/file/${image._id}`,
+      file: `${url}/file/${image.filename.system}`,
       self: `${url}/image/${image._id}`,
       delete: `${url}/image/${image._id}`
     }
