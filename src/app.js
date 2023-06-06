@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-  app.json({ message: "Welcome to Pycs!" })
+  res.json({ message: "Welcome to Pycs!" })
 })
 
 app.use("/user", UserRouter)
