@@ -35,6 +35,10 @@ app.use("/file", express.static(path.resolve(__dirname, "uploads")))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+app.get("/", (req, res) => {
+  app.json({ message: "Welcome to Pycs!" })
+})
+
 app.use("/user", UserRouter)
 app.use("/image", ImageRouter)
 app.use("/comment", CommentRouter)
