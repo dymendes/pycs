@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, "/tmp/"),
+  destination: (req, file, cb) => cb(null, `${__dirname}/uploads/`),
   filename: (req, file, cb) => {
     const date = Date.now()
     const extension = path.extname(file.originalname)
