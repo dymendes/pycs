@@ -1,4 +1,4 @@
-# pycs
+# Pycs
 
 This template should help you get started with Node.
 
