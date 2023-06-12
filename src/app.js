@@ -30,10 +30,10 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 app.use(cors())
 
-app.use("/file", express.static(path.resolve(__dirname, "uploads")))
-
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+
+app.use("/file", express.static(path.resolve(__dirname, "uploads")))
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Pycs!" })
