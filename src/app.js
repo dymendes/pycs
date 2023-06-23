@@ -36,7 +36,7 @@ app.use(express.json())
 app.use("/file", express.static(path.resolve(__dirname, "uploads")))
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Pycs api!" })
+  res.json({ message: "Welcome to Pycs!" })
 })
 
 app.use("/user", UserRouter)
